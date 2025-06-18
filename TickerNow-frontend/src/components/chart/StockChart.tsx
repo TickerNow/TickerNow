@@ -4,11 +4,13 @@ import {
     XAxis,
     YAxis,
     Tooltip,
+    Bar,
+    BarChart,
     ResponsiveContainer,
 } from "recharts";
 
 import type { Stock } from "../../types/Stock";
-import { useRef, useState, useEffect  } from "react";
+import { useRef, useState, useEffect, useMemo, memo } from "react";
 
 function convertDateFormat(dateStr: string): string {
     const delimiter = dateStr.includes('.') ? '.' : '-';
@@ -53,7 +55,6 @@ function getGroupedAverageData(data: Stock[], mode: 'daily' | 'weekly' | 'monthl
         const week = getMonthlyWeekNumber(dateObj);
         const month = String(dateObj.getMonth() + 1).padStart(2, '0');
         key = `${year}-${month}-${week}`;
-        console.log(key)
         } else if (mode === 'monthly') {
         const year = dateObj.getFullYear();
         const month = String(dateObj.getMonth() + 1).padStart(2, '0');
@@ -67,12 +68,14 @@ function getGroupedAverageData(data: Stock[], mode: 'daily' | 'weekly' | 'monthl
     
     return Object.entries(grouped).map(([key, items]) => {
         const avgClose = items.reduce((sum, item) => sum + item.close_price, 0) / items.length;
+        const totalVolume = items.reduce((sum, item) => sum + item.trading_volume, 0);
         const base = items[items.length - 1]; // 가장 마지막 데이터 사용
 
         return {
         ...base,
         name: key,
         value: Math.round(avgClose),
+        trading_volume: totalVolume,
         };
     });
 }
@@ -82,7 +85,7 @@ interface Props {
 }
 
 // 커스텀 툴팁 컴포넌트
-function CustomTooltip({ active, payload }: any) {
+const CustomTooltip = memo(({ active, payload }: any) => {
     if (active && payload && payload.length) {
         const stock: Stock = payload[0].payload;
 
@@ -101,7 +104,7 @@ function CustomTooltip({ active, payload }: any) {
     }
 
     return null;
-}
+});
 
 
 export default function StockChart({ data }: Props) {
@@ -113,7 +116,7 @@ export default function StockChart({ data }: Props) {
     );
 
     const [mode, setMode] = useState<'daily' | 'weekly' | 'monthly'>('daily');
-    const processed = getGroupedAverageData(sortedData, mode);
+    const processed = useMemo(() => getGroupedAverageData(sortedData, mode), [sortedData, mode]);
 
     const [visibleStartIndex, setVisibleStartIndex] = useState<number>(0);
     const [visibleRange, setVisibleRange] = useState<number>(processed.length);
@@ -127,20 +130,10 @@ export default function StockChart({ data }: Props) {
     }, [mode, processed.length]);
 
     const handleZoomIn = () => {
-    const newRange = Math.max(maxZoomRange, Math.floor(visibleRange / 2));
-    setVisibleRange(newRange);
-
-    // 최근 날짜가 보이도록 범위의 끝을 데이터 끝에 맞춤
-    setVisibleStartIndex(Math.max(0, processed.length - newRange));
-};
-
-    // const handleZoomIn = () => {
-    //     const newRange = Math.max(maxZoomRange, Math.floor(visibleRange / 2));
-    //     setVisibleRange(newRange);
-    //     setVisibleStartIndex((prev) =>
-    //         Math.min(prev, processed.length - newRange)
-    //     );
-    // };
+        const newRange = Math.max(maxZoomRange, Math.floor(visibleRange / 2));
+        setVisibleRange(newRange);
+        setVisibleStartIndex(Math.max(0, processed.length - newRange));
+    };
 
     const handleZoomOut = () => {
         const newRange = Math.min(processed.length, Math.floor(visibleRange * 2));
@@ -185,21 +178,23 @@ export default function StockChart({ data }: Props) {
     };
 
     const onWheel = (e: React.WheelEvent) => {
-        e.preventDefault();
-
-        const direction = e.deltaY > 0 ? 1 : -1;
-
-        const threshold = 3;
-        const maxStep = 30;
-        const step = Math.min(maxStep, Math.floor(Math.abs(e.deltaY) / threshold));
-
-        setVisibleStartIndex((prev) => {
-            const newStart = Math.min(
-                Math.max(0, prev + direction * step),
-                processed.length - visibleRange
-            );
-            return newStart;
-        });
+        if (e.shiftKey) {
+            e.preventDefault();
+    
+            const direction = e.deltaY > 0 ? 1 : -1;
+    
+            const threshold = 3;
+            const maxStep = 30;
+            const step = Math.min(maxStep, Math.floor(Math.abs(e.deltaY) / threshold));
+    
+            setVisibleStartIndex((prev) => {
+                const newStart = Math.min(
+                    Math.max(0, prev + direction * step),
+                    processed.length - visibleRange
+                );
+                return newStart;
+            });
+        }
     };
 
     const slicedData = processed.slice(
@@ -276,33 +271,55 @@ export default function StockChart({ data }: Props) {
                 className="select-none"
                 onWheel={onWheel}
             >
-                <ResponsiveContainer width="100%" height={600}>
-                    <AreaChart
-                        data={slicedData}
-                        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-                    >
-                        <defs>
-                        <linearGradient id="colorLine" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#FCD535" stopOpacity={0.5} />
-                            <stop offset="100%" stopColor="#FCD535" stopOpacity={0} />
-                        </linearGradient>
-                        </defs>
-                        <XAxis dataKey="name" />
-                        <YAxis
+                <ResponsiveContainer width="100%" height={800}>
+                    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+                        {/* 가격 차트: 높이 70% */}
+                        <div style={{ flex: 7 }}>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart
+                            data={slicedData}
+                            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+                            >
+                            <defs>
+                                <linearGradient id="colorLine" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#FCD535" stopOpacity={0.5} />
+                                <stop offset="100%" stopColor="#FCD535" stopOpacity={0} />
+                                </linearGradient>
+                            </defs>
+                            <XAxis dataKey="name" />
+                            <YAxis
                                 width={70}
                                 domain={[minY, maxY]}
                                 ticks={ticks}
                                 tickFormatter={(value) => value.toLocaleString()}
-                        />
-                        <Tooltip content={<CustomTooltip />} />
-                        <Area
-                        type="monotone"
-                        dataKey="value"
-                        stroke="#FCD535"
-                        fillOpacity={1}
-                        fill="url(#colorLine)"
-                        />
-                    </AreaChart>
+                            />
+                            <Tooltip content={<CustomTooltip />} />
+                            <Area
+                                type="monotone"
+                                dataKey="value"
+                                stroke="#FCD535"
+                                fillOpacity={1}
+                                fill="url(#colorLine)"
+                            />
+                            </AreaChart>
+                        </ResponsiveContainer>
+                        </div>
+
+                        {/* 거래량 차트: 높이 30% */}
+                        <div style={{ flex: 3 }}>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={slicedData} margin={{ top: 0, right: 30, left: 0, bottom: 0 }}>
+                            <XAxis dataKey="name" />
+                            <YAxis
+                                width={70}
+                                tickFormatter={(value) => value.toLocaleString()}
+                                domain={[0, 'dataMax']}
+                            />
+                            <Bar dataKey="trading_volume" fill="#8884d8" barSize={20} />
+                            </BarChart>
+                        </ResponsiveContainer>
+                        </div>
+                    </div>
                 </ResponsiveContainer>
             </div>
         </div>
