@@ -127,12 +127,20 @@ export default function StockChart({ data }: Props) {
     }, [mode, processed.length]);
 
     const handleZoomIn = () => {
-        const newRange = Math.max(maxZoomRange, Math.floor(visibleRange / 2));
-        setVisibleRange(newRange);
-        setVisibleStartIndex((prev) =>
-            Math.min(prev, processed.length - newRange)
-        );
-    };
+    const newRange = Math.max(maxZoomRange, Math.floor(visibleRange / 2));
+    setVisibleRange(newRange);
+
+    // 최근 날짜가 보이도록 범위의 끝을 데이터 끝에 맞춤
+    setVisibleStartIndex(Math.max(0, processed.length - newRange));
+};
+
+    // const handleZoomIn = () => {
+    //     const newRange = Math.max(maxZoomRange, Math.floor(visibleRange / 2));
+    //     setVisibleRange(newRange);
+    //     setVisibleStartIndex((prev) =>
+    //         Math.min(prev, processed.length - newRange)
+    //     );
+    // };
 
     const handleZoomOut = () => {
         const newRange = Math.min(processed.length, Math.floor(visibleRange * 2));

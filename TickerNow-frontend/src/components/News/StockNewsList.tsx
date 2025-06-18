@@ -54,34 +54,48 @@ export default function StockNewsList({ news }: { news: StockNews[] | undefined 
                 ))}
             </ul>
 
-            {/* 페이지네이션 */}
-            {totalPages > 1 && (
-                <div className="flex justify-center mt-4 space-x-3">
-                    <button
-                        className="px-3 py-1 bg-gray-700 rounded disabled:opacity-50"
-                        onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-                        disabled={currentPage === 1}
-                    >
-                        이전
-                    </button>
-                    {[...Array(totalPages)].map((_, i) => (
-                        <button
-                            key={i}
-                            className={`px-3 py-1 rounded ${currentPage === i + 1 ? "bg-blue-600" : "bg-gray-700"}`}
-                            onClick={() => setCurrentPage(i + 1)}
-                        >
-                            {i + 1}
-                        </button>
-                    ))}
-                    <button
-                        className="px-3 py-1 bg-gray-700 rounded disabled:opacity-50"
-                        onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-                        disabled={currentPage === totalPages}
-                    >
-                        다음
-                    </button>
-                </div>
-            )}
+        {/* 페이지네이션 */}
+        {totalPages > 1 && (
+            <div className="flex justify-center mt-4 space-x-2">
+                <button
+                    className="px-3 py-1 bg-gray-700 rounded disabled:opacity-50"
+                    onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+                    disabled={currentPage === 1}
+                >
+                    이전
+                </button>
+
+                {/* 페이지 번호 최대 10개씩 */}
+                {(() => {
+                    const maxVisiblePages = 10;
+                    const currentGroup = Math.floor((currentPage - 1) / maxVisiblePages);
+                    const start = currentGroup * maxVisiblePages + 1;
+                    const end = Math.min(start + maxVisiblePages - 1, totalPages);
+
+                    return Array.from({ length: end - start + 1 }, (_, i) => {
+                        const pageNumber = start + i;
+                        return (
+                            <button
+                                key={pageNumber}
+                                className={`px-3 py-1 rounded ${currentPage === pageNumber ? "bg-blue-600" : "bg-gray-700"}`}
+                                onClick={() => setCurrentPage(pageNumber)}
+                            >
+                                {pageNumber}
+                            </button>
+                        );
+                    });
+                })()}
+
+                <button
+                    className="px-3 py-1 bg-gray-700 rounded disabled:opacity-50"
+                    onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                >
+                    다음
+                </button>
+            </div>
+        )}
+
         </div>
     );
 }

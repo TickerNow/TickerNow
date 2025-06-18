@@ -17,6 +17,7 @@ import jwt
 from dotenv import load_dotenv
 import logging
 
+#npm run dev
 os.environ["PYSPARK_PYTHON"] = "C:/Users/jaehy/anaconda3/python.exe"
 
 spark = SparkSession.builder \
@@ -92,12 +93,6 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 app = Flask(__name__)
 
-# @app.before_request
-# def log_request_info():
-#     ip = request.headers.get('X-Forwarded-For', request.remote_addr)
-#     print(f"[요청 로그] IP: {ip}, Path: {request.path}, Method: {request.method}")
-
-
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
@@ -115,7 +110,7 @@ def log_request_info():
 CORS(
     app,
     #resources={r"/*": {"origins": "*"}},  # 모든 경로에 대해 모든 origin 허용
-    resources={r"/*": {"origins": "https://c145-124-216-101-107.ngrok-free.app"}},
+    resources={r"/*": {"origins": "http://localhost:5173"}},
     allow_headers=["Content-Type", "Authorization", "ngrok-skip-browser-warning"],
     expose_headers=["Authorization"],
     supports_credentials=True

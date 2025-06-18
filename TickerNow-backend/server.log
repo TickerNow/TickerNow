@@ -32,3 +32,317 @@
 2025-06-18 20:38:28,925 [INFO] 127.0.0.1 - - [18/Jun/2025 20:38:28] "OPTIONS /stock_news HTTP/1.1" 200 -
 2025-06-18 20:38:29,015 [INFO] [요청] IP: 124.216.101.107, GET /stock_news
 2025-06-18 20:38:36,693 [INFO] 127.0.0.1 - - [18/Jun/2025 20:38:36] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:49:14,457 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.7:5000
+2025-06-18 21:49:14,457 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-18 21:50:27,153 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:50:27,154 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:50:27,155 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:50:27,155 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:27] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:50:27,155 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:27] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:50:27,156 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:27] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:50:27,415 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:50:27,461 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:50:27,462 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:27] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:50:27,726 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:50:27,727 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:27] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:50:32,800 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:50:32,801 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:32] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:50:33,115 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:50:33,116 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:33] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:50:33,116 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:50:33,117 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:33] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:50:33,118 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:50:33,118 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:33] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:50:33,433 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:50:33,433 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:33] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:50:36,557 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:36] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:50:36,871 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:50:45,494 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:45] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:50:56,089 [INFO] [요청] IP: 127.0.0.1, OPTIONS /sign_id_check
+2025-06-18 21:50:56,090 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:56] "OPTIONS /sign_id_check HTTP/1.1" 200 -
+2025-06-18 21:50:56,403 [INFO] [요청] IP: 127.0.0.1, POST /sign_id_check
+2025-06-18 21:50:58,673 [INFO] [요청] IP: 127.0.0.1, POST /sign_id_check
+2025-06-18 21:50:59,513 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:59] "POST /sign_id_check HTTP/1.1" 200 -
+2025-06-18 21:50:59,513 [INFO] 127.0.0.1 - - [18/Jun/2025 21:50:59] "POST /sign_id_check HTTP/1.1" 200 -
+2025-06-18 21:50:59,514 [INFO] Closing down clientserver connection
+2025-06-18 21:50:59,514 [INFO] Closing down clientserver connection
+2025-06-18 21:51:02,102 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:51:02,103 [INFO] 127.0.0.1 - - [18/Jun/2025 21:51:02] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:51:02,359 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:51:06,939 [INFO] [요청] IP: 127.0.0.1, OPTIONS /sign_nickname_check
+2025-06-18 21:51:06,939 [INFO] 127.0.0.1 - - [18/Jun/2025 21:51:06] "OPTIONS /sign_nickname_check HTTP/1.1" 200 -
+2025-06-18 21:51:07,249 [INFO] [요청] IP: 127.0.0.1, POST /sign_nickname_check
+2025-06-18 21:51:08,127 [INFO] 127.0.0.1 - - [18/Jun/2025 21:51:08] "POST /sign_nickname_check HTTP/1.1" 200 -
+2025-06-18 21:51:08,129 [INFO] Closing down clientserver connection
+2025-06-18 21:51:11,493 [INFO] 127.0.0.1 - - [18/Jun/2025 21:51:11] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:51:31,747 [INFO] [요청] IP: 127.0.0.1, OPTIONS /sign_up
+2025-06-18 21:51:31,747 [INFO] 127.0.0.1 - - [18/Jun/2025 21:51:31] "OPTIONS /sign_up HTTP/1.1" 200 -
+2025-06-18 21:51:32,007 [INFO] [요청] IP: 127.0.0.1, POST /sign_up
+2025-06-18 21:51:48,836 [INFO] 127.0.0.1 - - [18/Jun/2025 21:51:48] "POST /sign_up HTTP/1.1" 200 -
+2025-06-18 21:51:48,838 [INFO] Closing down clientserver connection
+2025-06-18 21:51:50,099 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:51:50,110 [INFO] 127.0.0.1 - - [18/Jun/2025 21:51:50] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:51:50,423 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:52:02,164 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:02] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:52:31,153 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:52:31,154 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:31] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:52:31,414 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:52:34,506 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:52:34,507 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:34] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:52:34,814 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:52:34,814 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:52:34,815 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:34] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:52:34,817 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:34] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:52:35,070 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:52:35,070 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:35] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:52:40,354 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:40] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:52:40,673 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:52:47,504 [INFO] [요청] IP: 127.0.0.1, OPTIONS /login
+2025-06-18 21:52:47,505 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:47] "OPTIONS /login HTTP/1.1" 200 -
+2025-06-18 21:52:47,811 [INFO] [요청] IP: 127.0.0.1, POST /login
+2025-06-18 21:52:48,341 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:48] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-18 21:52:48,341 [INFO] Closing down clientserver connection
+2025-06-18 21:52:49,115 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:49] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:52:51,860 [INFO] [요청] IP: 127.0.0.1, POST /login
+2025-06-18 21:52:52,206 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:52] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-18 21:52:52,210 [INFO] Closing down clientserver connection
+2025-06-18 21:52:55,042 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:52:55,042 [INFO] 127.0.0.1 - - [18/Jun/2025 21:52:55] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:52:55,345 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:53:02,871 [INFO] 127.0.0.1 - - [18/Jun/2025 21:53:02] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:53:16,136 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:53:16,136 [INFO] 127.0.0.1 - - [18/Jun/2025 21:53:16] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:53:16,451 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:53:25,006 [INFO] 127.0.0.1 - - [18/Jun/2025 21:53:25] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:53:26,035 [INFO] [요청] IP: 127.0.0.1, OPTIONS /login
+2025-06-18 21:53:26,036 [INFO] 127.0.0.1 - - [18/Jun/2025 21:53:26] "OPTIONS /login HTTP/1.1" 200 -
+2025-06-18 21:53:26,346 [INFO] [요청] IP: 127.0.0.1, POST /login
+2025-06-18 21:53:26,703 [INFO] 127.0.0.1 - - [18/Jun/2025 21:53:26] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-18 21:53:26,704 [INFO] Closing down clientserver connection
+2025-06-18 21:53:28,094 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:53:28,095 [INFO] 127.0.0.1 - - [18/Jun/2025 21:53:28] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:53:28,405 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:53:36,968 [INFO] 127.0.0.1 - - [18/Jun/2025 21:53:36] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:54:05,530 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:54:05,531 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:05] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:54:05,846 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:54:06,752 [INFO] [요청] IP: 127.0.0.1, OPTIONS /login
+2025-06-18 21:54:06,752 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:06] "OPTIONS /login HTTP/1.1" 200 -
+2025-06-18 21:54:07,067 [INFO] [요청] IP: 127.0.0.1, POST /login
+2025-06-18 21:54:07,320 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:07] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-18 21:54:07,322 [INFO] Closing down clientserver connection
+2025-06-18 21:54:13,828 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:13] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:54:20,967 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:54:20,968 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:54:20,968 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:20] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:54:20,968 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 21:54:20,969 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:20] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:54:20,969 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:20] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 21:54:21,226 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:54:21,273 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:54:21,274 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:21] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:54:21,531 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 21:54:21,532 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:21] "[31m[1mGET /check-auth HTTP/1.1[0m" 401 -
+2025-06-18 21:54:29,866 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:29] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:54:33,124 [INFO] [요청] IP: 127.0.0.1, OPTIONS /login
+2025-06-18 21:54:33,125 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:33] "OPTIONS /login HTTP/1.1" 200 -
+2025-06-18 21:54:33,428 [INFO] [요청] IP: 127.0.0.1, POST /login
+2025-06-18 21:54:33,762 [INFO] 127.0.0.1 - - [18/Jun/2025 21:54:33] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-18 21:54:33,763 [INFO] Closing down clientserver connection
+2025-06-18 21:59:41,874 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.7:5000
+2025-06-18 21:59:41,875 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-18 21:59:43,650 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:59:43,650 [INFO] 127.0.0.1 - - [18/Jun/2025 21:59:43] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:59:43,909 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 21:59:50,827 [INFO] [요청] IP: 127.0.0.1, OPTIONS /login
+2025-06-18 21:59:50,828 [INFO] 127.0.0.1 - - [18/Jun/2025 21:59:50] "OPTIONS /login HTTP/1.1" 200 -
+2025-06-18 21:59:51,145 [INFO] [요청] IP: 127.0.0.1, POST /login
+2025-06-18 21:59:51,727 [INFO] 127.0.0.1 - - [18/Jun/2025 21:59:51] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 21:59:53,918 [INFO] 127.0.0.1 - - [18/Jun/2025 21:59:53] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-18 21:59:53,918 [INFO] Closing down clientserver connection
+2025-06-18 21:59:56,307 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 21:59:56,307 [INFO] 127.0.0.1 - - [18/Jun/2025 21:59:56] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 21:59:56,565 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:00:04,297 [INFO] 127.0.0.1 - - [18/Jun/2025 22:00:04] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:00:19,486 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:00:19,486 [INFO] 127.0.0.1 - - [18/Jun/2025 22:00:19] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:00:19,832 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:00:28,645 [INFO] 127.0.0.1 - - [18/Jun/2025 22:00:28] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:01:14,682 [INFO] Error while receiving.
+Traceback (most recent call last):
+  File "C:\Users\jaehy\anaconda3\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaehy\anaconda3\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+2025-06-18 22:01:14,684 [INFO] Closing down clientserver connection
+2025-06-18 22:01:14,685 [ERROR] Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\jaehy\anaconda3\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaehy\anaconda3\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jaehy\anaconda3\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaehy\anaconda3\Lib\site-packages\py4j\clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-06-18 22:01:14,686 [INFO] Closing down clientserver connection
+2025-06-18 22:01:14,714 [INFO] Closing down clientserver connection
+2025-06-18 22:01:26,375 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.7:5000
+2025-06-18 22:01:26,376 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-18 22:01:36,846 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:01:36,847 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:36] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:01:37,107 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:01:45,664 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:45] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:01:54,892 [INFO] [요청] IP: 127.0.0.1, OPTIONS /login
+2025-06-18 22:01:54,894 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:54] "OPTIONS /login HTTP/1.1" 200 -
+2025-06-18 22:01:55,204 [INFO] [요청] IP: 127.0.0.1, POST /login
+2025-06-18 22:01:57,892 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:57] "POST /login HTTP/1.1" 200 -
+2025-06-18 22:01:57,893 [INFO] Closing down clientserver connection
+2025-06-18 22:01:58,032 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:01:58,035 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:58] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:01:58,348 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 22:01:58,349 [INFO] [요청] IP: 127.0.0.1, OPTIONS /check-auth
+2025-06-18 22:01:58,350 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:01:58,350 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:58] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 22:01:58,351 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:58] "OPTIONS /check-auth HTTP/1.1" 200 -
+2025-06-18 22:01:58,669 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 22:01:58,670 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:58] "GET /check-auth HTTP/1.1" 200 -
+2025-06-18 22:01:58,915 [INFO] [요청] IP: 127.0.0.1, GET /check-auth
+2025-06-18 22:01:58,916 [INFO] 127.0.0.1 - - [18/Jun/2025 22:01:58] "GET /check-auth HTTP/1.1" 200 -
+2025-06-18 22:02:05,980 [INFO] 127.0.0.1 - - [18/Jun/2025 22:02:05] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:02:43,949 [INFO] [요청] IP: 127.0.0.1, OPTIONS /daum_search
+2025-06-18 22:02:43,955 [INFO] 127.0.0.1 - - [18/Jun/2025 22:02:43] "OPTIONS /daum_search HTTP/1.1" 200 -
+2025-06-18 22:02:44,207 [INFO] [요청] IP: 127.0.0.1, POST /daum_search
+2025-06-18 22:03:30,562 [INFO] 127.0.0.1 - - [18/Jun/2025 22:03:30] "POST /daum_search HTTP/1.1" 200 -
+2025-06-18 22:03:30,563 [INFO] Closing down clientserver connection
+2025-06-18 22:03:52,408 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:03:52,408 [INFO] 127.0.0.1 - - [18/Jun/2025 22:03:52] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:03:52,652 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:03:58,490 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:03:58,491 [INFO] 127.0.0.1 - - [18/Jun/2025 22:03:58] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:03:58,806 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:04:01,477 [INFO] 127.0.0.1 - - [18/Jun/2025 22:04:01] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:04:04,143 [INFO] 127.0.0.1 - - [18/Jun/2025 22:04:04] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:04:04,151 [INFO] Closing down clientserver connection
+2025-06-18 22:04:04,965 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:04:04,966 [INFO] 127.0.0.1 - - [18/Jun/2025 22:04:04] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:04:05,209 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:04:13,612 [INFO] 127.0.0.1 - - [18/Jun/2025 22:04:13] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:06:49,239 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:06:49,240 [INFO] 127.0.0.1 - - [18/Jun/2025 22:06:49] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:06:49,256 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:06:49,256 [INFO] 127.0.0.1 - - [18/Jun/2025 22:06:49] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:06:49,499 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:06:49,546 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:06:50,735 [INFO] 127.0.0.1 - - [18/Jun/2025 22:06:50] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:06:50,737 [INFO] Closing down clientserver connection
+2025-06-18 22:07:00,106 [INFO] 127.0.0.1 - - [18/Jun/2025 22:07:00] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:07:54,106 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:07:54,107 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:07:54,107 [INFO] 127.0.0.1 - - [18/Jun/2025 22:07:54] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:07:54,107 [INFO] 127.0.0.1 - - [18/Jun/2025 22:07:54] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:07:54,369 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:07:54,414 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:07:55,378 [INFO] 127.0.0.1 - - [18/Jun/2025 22:07:55] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:07:55,380 [INFO] Closing down clientserver connection
+2025-06-18 22:08:02,661 [INFO] 127.0.0.1 - - [18/Jun/2025 22:08:02] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:08:51,886 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:08:51,886 [INFO] 127.0.0.1 - - [18/Jun/2025 22:08:51] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:08:52,194 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:08:54,725 [INFO] 127.0.0.1 - - [18/Jun/2025 22:08:54] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:08:54,729 [INFO] Closing down clientserver connection
+2025-06-18 22:09:10,431 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:09:10,432 [INFO] 127.0.0.1 - - [18/Jun/2025 22:09:10] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:09:10,740 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:09:19,400 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:09:19,400 [INFO] 127.0.0.1 - - [18/Jun/2025 22:09:19] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:09:19,717 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:09:20,177 [INFO] 127.0.0.1 - - [18/Jun/2025 22:09:20] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:09:22,193 [INFO] 127.0.0.1 - - [18/Jun/2025 22:09:22] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:09:22,194 [INFO] Closing down clientserver connection
+2025-06-18 22:09:32,901 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:09:32,902 [INFO] 127.0.0.1 - - [18/Jun/2025 22:09:32] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:09:33,161 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:09:34,576 [INFO] 127.0.0.1 - - [18/Jun/2025 22:09:34] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:09:34,578 [INFO] Closing down clientserver connection
+2025-06-18 22:10:51,272 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:10:51,272 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:10:51,273 [INFO] 127.0.0.1 - - [18/Jun/2025 22:10:51] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:10:51,274 [INFO] 127.0.0.1 - - [18/Jun/2025 22:10:51] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:10:51,530 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:10:51,591 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:10:53,099 [INFO] 127.0.0.1 - - [18/Jun/2025 22:10:53] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:10:53,103 [INFO] Closing down clientserver connection
+2025-06-18 22:11:00,104 [INFO] [요청] IP: 127.0.0.1, OPTIONS /chat
+2025-06-18 22:11:00,105 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:00] "OPTIONS /chat HTTP/1.1" 200 -
+2025-06-18 22:11:00,417 [INFO] [요청] IP: 127.0.0.1, POST /chat
+2025-06-18 22:11:03,418 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:03] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:11:06,682 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:11:06,683 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:06] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:11:06,683 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:11:06,685 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:06] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:11:06,996 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:11:06,996 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:11:16,560 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:16] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:11:21,370 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:11:21,370 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:21] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:11:21,673 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:11:30,589 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:30] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:11:38,165 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:38] "POST /chat HTTP/1.1" 200 -
+2025-06-18 22:11:38,165 [INFO] Closing down clientserver connection
+2025-06-18 22:11:38,289 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:38] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:11:38,291 [INFO] Closing down clientserver connection
+2025-06-18 22:11:39,208 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:11:39,208 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:39] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:11:39,466 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:11:47,417 [INFO] 127.0.0.1 - - [18/Jun/2025 22:11:47] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:12:44,639 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:12:44,639 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:12:44,639 [INFO] 127.0.0.1 - - [18/Jun/2025 22:12:44] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:12:44,640 [INFO] 127.0.0.1 - - [18/Jun/2025 22:12:44] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:12:44,896 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:12:44,958 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:12:45,930 [INFO] 127.0.0.1 - - [18/Jun/2025 22:12:45] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:12:45,932 [INFO] Closing down clientserver connection
+2025-06-18 22:12:53,780 [INFO] 127.0.0.1 - - [18/Jun/2025 22:12:53] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:13:05,379 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:13:05,380 [INFO] 127.0.0.1 - - [18/Jun/2025 22:13:05] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:13:05,695 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:13:05,696 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:13:05,697 [INFO] 127.0.0.1 - - [18/Jun/2025 22:13:05] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:13:06,015 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:13:07,560 [INFO] 127.0.0.1 - - [18/Jun/2025 22:13:07] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:13:07,566 [INFO] Closing down clientserver connection
+2025-06-18 22:13:14,218 [INFO] 127.0.0.1 - - [18/Jun/2025 22:13:14] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:15:12,844 [INFO] [요청] IP: 127.0.0.1, OPTIONS /stock_news
+2025-06-18 22:15:12,845 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:15:12,846 [INFO] 127.0.0.1 - - [18/Jun/2025 22:15:12] "OPTIONS /stock_news HTTP/1.1" 200 -
+2025-06-18 22:15:12,846 [INFO] 127.0.0.1 - - [18/Jun/2025 22:15:12] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:15:13,088 [INFO] [요청] IP: 127.0.0.1, POST /DB_stock_search
+2025-06-18 22:15:13,150 [INFO] [요청] IP: 127.0.0.1, GET /stock_news
+2025-06-18 22:15:14,828 [INFO] 127.0.0.1 - - [18/Jun/2025 22:15:14] "POST /DB_stock_search HTTP/1.1" 200 -
+2025-06-18 22:15:14,831 [INFO] Closing down clientserver connection
+2025-06-18 22:15:21,233 [INFO] 127.0.0.1 - - [18/Jun/2025 22:15:21] "GET /stock_news HTTP/1.1" 200 -
+2025-06-18 22:15:22,092 [INFO] [요청] IP: 127.0.0.1, OPTIONS /DB_stock_search
+2025-06-18 22:15:22,093 [INFO] 127.0.0.1 - - [18/Jun/2025 22:15:22] "OPTIONS /DB_stock_search HTTP/1.1" 200 -
