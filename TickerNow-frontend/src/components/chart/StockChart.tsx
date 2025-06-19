@@ -10,7 +10,7 @@ import {
 } from "recharts";
 
 import type { Stock } from "../../types/Stock";
-import { useRef, useState, useEffect, useMemo, memo } from "react";
+import { useRef, useState, useEffect  } from "react";
 
 function convertDateFormat(dateStr: string): string {
     const delimiter = dateStr.includes('.') ? '.' : '-';
@@ -85,7 +85,7 @@ interface Props {
 }
 
 // 커스텀 툴팁 컴포넌트
-const CustomTooltip = memo(({ active, payload }: any) => {
+function CustomTooltip({ active, payload }: any) {
     if (active && payload && payload.length) {
         const stock: Stock = payload[0].payload;
 
@@ -104,7 +104,7 @@ const CustomTooltip = memo(({ active, payload }: any) => {
     }
 
     return null;
-});
+}
 
 
 export default function StockChart({ data }: Props) {
@@ -116,7 +116,7 @@ export default function StockChart({ data }: Props) {
     );
 
     const [mode, setMode] = useState<'daily' | 'weekly' | 'monthly'>('daily');
-    const processed = useMemo(() => getGroupedAverageData(sortedData, mode), [sortedData, mode]);
+    const processed = getGroupedAverageData(sortedData, mode);
 
     const [visibleStartIndex, setVisibleStartIndex] = useState<number>(0);
     const [visibleRange, setVisibleRange] = useState<number>(processed.length);
@@ -195,6 +195,12 @@ export default function StockChart({ data }: Props) {
                 return newStart;
             });
         }
+    };
+
+    const calculateYAxisWidth = (data: number[]): number => {
+        const max = Math.max(...data);
+        const digits = max.toLocaleString().length;
+        return digits * 8 + 10; // 자릿수 * 글자 폭 + 여유
     };
 
     const slicedData = processed.slice(
@@ -288,7 +294,7 @@ export default function StockChart({ data }: Props) {
                             </defs>
                             <XAxis dataKey="name" />
                             <YAxis
-                                width={70}
+                                width={calculateYAxisWidth(slicedData.map(d => d.trading_volume))}
                                 domain={[minY, maxY]}
                                 ticks={ticks}
                                 tickFormatter={(value) => value.toLocaleString()}
@@ -311,7 +317,7 @@ export default function StockChart({ data }: Props) {
                             <BarChart data={slicedData} margin={{ top: 0, right: 30, left: 0, bottom: 0 }}>
                             <XAxis dataKey="name" />
                             <YAxis
-                                width={70}
+                                width={calculateYAxisWidth(slicedData.map(d => d.trading_volume))}
                                 tickFormatter={(value) => value.toLocaleString()}
                                 domain={[0, 'dataMax']}
                             />
