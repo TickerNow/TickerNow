@@ -93,12 +93,14 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 app = Flask(__name__)
 
+log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'server.log')
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
     handlers=[
-        logging.FileHandler("server.log", encoding='utf-8'),
-        logging.StreamHandler()  # 콘솔 출력도 원하면 추가
+        logging.FileHandler(log_file_path, encoding='utf-8'),
+        logging.StreamHandler()
     ]
 )
 
@@ -331,7 +333,6 @@ def chat():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-from flask import Flask, request, jsonify
 
 @app.route("/realtime_search", methods=["POST"])
 def run_realtime_search():
@@ -352,7 +353,7 @@ def run_realtime_search():
     df = spark.sql(query)
     results = df.collect()
     results_json = [row.asDict() for row in results]
-    print(results_json)
+    #print(results_json)
     return jsonify(results_json), 200
 
 
