@@ -83,7 +83,7 @@ def stock_load(spark, search):
         #마지막 전 페이지 까지만 크롤링 하도록 함
         next_page_btn = driver.find_elements(By.XPATH, '//*[@id="boxDayHistory"]/div/div[2]/div/div/a[13]')
         if init == 1 and not next_page_btn:
-            print("다음 페이지 버튼이 더 이상 없습니다. 종료합니다.")
+            print("다음 페이지가 더 이상 없습니다. 종료합니다.")
             break
 
         try:
