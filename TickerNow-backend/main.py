@@ -159,7 +159,8 @@ def run_stock_load(): # 기업 주식 정보 적재
         }), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+            logging.error(f"에러 발생: {str(e)}")
+            return jsonify({"error": str(e)}), 500 
 
 
 @app.route('/daum_search', methods=['POST'])
@@ -182,7 +183,8 @@ def run_daum_news_load():
         }), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+            logging.error(f"에러 발생: {str(e)}")
+            return jsonify({"error": str(e)}), 500 
 
 @app.route('/DB_stock_search', methods=['POST'])
 def run_get_stock_data_from_db():
