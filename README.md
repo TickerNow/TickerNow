@@ -104,4 +104,4 @@ TickerNow/
 
 ## 🎥 시연 영상
 
-[👉 시연 영상 바로 보기](https://drive.google.com/file/d/1jx62D_lsXW-Gv_5ZYdd0RqRqnCbDqmhW/view?usp=sharing)
+[👉 시연 영상 바로 보기](https://www.youtube.com/watch?v=3xzc8nfbhX0)
